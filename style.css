@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'Alumni Sans';
+  src: url('fonts/AlumniSans-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Alumni Sans';
+  src: url('fonts/AlumniSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background: #fff;
+  color: #000;
+  text-transform: lowercase;
+  letter-spacing: 0.3px;
+  cursor: url("cursor.jpg") 16 16, crosshair;
+}
+
+/* HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+header.scrolled {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* LEFT */
+
+.header-left {
+  text-decoration: none;
+  color: black;
+  line-height: 1.05;
+}
+
+.header-left .name {
+  font-family: 'Alumni Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+}
+
+.header-left .role {
+  font-family: 'Alumni Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* NAV */
+
+.header-nav a {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  margin-left: 28px;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 0.8px;
+}
+
+.header-nav a {
+  position: relative;
+}
+
+.header-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.header-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* LAYOUT */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 90px; /* espacio para el header fijo */
+}
+
+.section {
+  padding: 15px 0;
+  scroll-margin-top: 70px;
+}
+
+.section h2 {
+  font-family: 'Alumni Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.divider {
+  height: 1px;
+  background: #ddd;
+  margin-bottom: 20px;
+}
+
+/* HERO */
+
+.hero {
+  margin-bottom: 40px;
+}
+
+/* MEDIA (VIDEO / STILLS) */
+
+.video {
+  position: relative;
+  width: 100%;
+}
+
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+}
+
+.placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #f2f2f2;
+}
+
+/* CREDITS HOVER */
+
+.media {
+  position: relative;
+}
+
+.credits {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+
+  font-family: 'Space Mono', monospace;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: white;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.media:hover .credits {
+  opacity: 1;
+}
+
+/* TEXTOS */
+
+.video,
+.slideshow {
+  margin-bottom: 30px;
+}
+
+.video p,
+.slideshow p,
+.hero p,
+.contacto p {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+a {
+  color: #1a0dab;
+  text-decoration: underline;
+}
+
+/* CONTACTO */
+
+.contacto {
+  text-align: center;
+}
+
+/* SLIDESHOW */
+
+.slideshow-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.slideshow-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: slideshow 16s infinite;
+}
+
+/* delays para 4 imágenes */
+.slideshow-media img:nth-child(1) { animation-delay: 0s; }
+.slideshow-media img:nth-child(2) { animation-delay: 4s; }
+.slideshow-media img:nth-child(3) { animation-delay: 8s; }
+.slideshow-media img:nth-child(4) { animation-delay: 12s; }
+
+@keyframes slideshow {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  25%  { opacity: 1; }
+  35%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+  }
+
+  main {
+    padding: 80px 20px 0;
+  }
+
+  .media:hover .credits {
+    opacity: 0;
+  }
+}
+
+
