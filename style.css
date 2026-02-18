@@ -265,33 +265,16 @@ a {
   }
 
   main {
-    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .section {
-    padding: 0;
-  }
-
-  .video,
-  .slideshow {
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-    box-sizing: border-box;
-  }
-
-  .media {
-    width: 100%;
-  }
-
-  iframe,
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
+    padding: 15px 0;
   }
 
 }
+
 
 
 
