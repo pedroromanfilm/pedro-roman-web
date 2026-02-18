@@ -257,7 +257,7 @@ a {
   100% { opacity: 0; }
 }
 
-/* MOBILE */
+/* MOBILE — FIX DEFINITIVO */
 @media (max-width: 768px) {
 
   header {
@@ -265,15 +265,30 @@ a {
   }
 
   main {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0;
   }
 
   .section {
     padding: 15px 0;
   }
 
+  /* aquí está la clave */
+  .video,
+  .slideshow {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  /* los medios NO se salen */
+  .media,
+  iframe,
+  .slideshow-media {
+    width: 100%;
+  }
+
 }
+
 
 
 
