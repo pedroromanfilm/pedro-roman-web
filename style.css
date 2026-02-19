@@ -66,8 +66,8 @@ header.scrolled {
 .header-left .name {
   font-family: 'Alumni Sans', sans-serif;
   font-weight: 300;
-  font-size: 20px;
-  letter-spacing: 0.3px;
+  font-size: 28px;
+  letter-spacing: 0.2px;
 }
 
 .header-left .role {
@@ -80,12 +80,12 @@ header.scrolled {
 /* NAV */
 
 .header-nav a {
-  font-family: 'Space Mono', monospace;
-  font-size: 12px;
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 18px;
   margin-left: 28px;
   color: black;
   text-decoration: none;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
 }
 
 .header-nav a {
@@ -125,10 +125,11 @@ main {
 .section h2 {
   font-family: 'Alumni Sans', sans-serif;
   font-weight: 300;
-  font-size: 20px;
-  letter-spacing: 1px;
+  font-size: 28px;      /* ⬅️ más jerarquía */
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  text-align: center;  /* ⬅️ centrado */
 }
 
 .divider {
@@ -209,9 +210,13 @@ main {
 .hero p,
 .contacto p {
   margin-top: 6px;
-  font-size: 13px;
+  font-family: 'Alumni Sans', sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  letter-spacing: 0.9px;
   color: #555;
 }
+
 
 a {
   color: #1a0dab;
