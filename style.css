@@ -215,6 +215,7 @@ main {
   font-size: 19px;
   letter-spacing: 0.9px;
   color: #555;
+  text-align: center;
 }
 
 
@@ -262,9 +263,28 @@ a {
   100% { opacity: 0; }
 }
 
+/* FADE IN SCROLL */
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* MOBILE — FIX DEFINITIVO */
 @media (max-width: 768px) {
 
+ .video p,
+  .slideshow p,
+  .contacto p {
+    font-size: 20px;   /* 👈 más grande en móvil */
+    line-height: 1.4; /* 👈 respira mejor */
+  }
   header {
     padding: 0 16px;
   }
