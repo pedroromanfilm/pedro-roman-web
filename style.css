@@ -381,15 +381,16 @@ a {
   letter-spacing: 0.9px;
   color: #555;
   line-height: 1.45;
-  margin-bottom: 40px; /* ⬅️ aire entre texto y links */
+  margin-bottom: 36px; /* 👈 separación clara respecto a los links */
 }
 
 .about-links p {
-  margin-bottom: 2px;
+  margin: 0;           /* 👈 elimina todo el aire extra */
+  line-height: 1.15;   /* 👈 links muy juntos */
   font-family: 'Alumni Sans', sans-serif;
   font-weight: 300;
-  font-size: 19px;
-  letter-spacing: 0.9px;
+  font-size: 18px;     /* 👈 un poco más pequeño que el texto */
+  letter-spacing: 0.8px;
   color: #555;
 }
 
